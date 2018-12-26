@@ -1,5 +1,7 @@
 require('../css/app.css');
 
+require('jquery');
+
 require('datatables.net-bs4');
 
 require( 'datatables.net-scroller-bs4' );
