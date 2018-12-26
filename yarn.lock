@@ -590,6 +590,11 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
+"@fortawesome/fontawesome-free@^5.6.3":
+  version "5.6.3"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.6.3.tgz#61c122c420d7a91613f393d6a06e5a4c6ae6abf3"
+  integrity sha512-s5PLdI9NYgjBvfrv6rhirPHlAHWx+Sfo/IjsAeiXYfmemC/GSjwsyz1wLnGPazbLPXWfk62ks980o9AmsxYUEQ==
+
 "@symfony/webpack-encore@^0.22.0":
   version "0.22.2"
   resolved "https://registry.yarnpkg.com/@symfony/webpack-encore/-/webpack-encore-0.22.2.tgz#036cffc86e2f4da2a194b5eabc2409c4ffe0d31b"
@@ -1930,6 +1935,23 @@ datatables.net-buttons@1.5.4:
   version "1.5.4"
   resolved "https://registry.yarnpkg.com/datatables.net-buttons/-/datatables.net-buttons-1.5.4.tgz#806c249e0858ea6cafccad433f4dd7736c0b1464"
   integrity sha512-xfo/23sGVXQW0kj2jLH6PzkhnXv+yGPrUXh7/ZT7xvCL1sNt8MLLf0tPLyrWynyeaew+Qvx5NBZer4MLxmisyw==
+  dependencies:
+    datatables.net "^1.10.15"
+    jquery ">=1.7"
+
+datatables.net-fixedcolumns-bs4@^3.2.6:
+  version "3.2.6"
+  resolved "https://registry.yarnpkg.com/datatables.net-fixedcolumns-bs4/-/datatables.net-fixedcolumns-bs4-3.2.6.tgz#866aa30cedc21fdd53c95f43a35b083af6f1e432"
+  integrity sha512-svG6/zQb1yZ3tLvBNeLxifVMfHQZSJL01sFuPoZztTpYK+QJ5thF0TbyCUEz9Kg/vQ2NPLPkX1uBBGj0IRkFPg==
+  dependencies:
+    datatables.net-bs4 "^1.10.15"
+    datatables.net-fixedcolumns "3.2.6"
+    jquery ">=1.7"
+
+datatables.net-fixedcolumns@3.2.6:
+  version "3.2.6"
+  resolved "https://registry.yarnpkg.com/datatables.net-fixedcolumns/-/datatables.net-fixedcolumns-3.2.6.tgz#7b9b2f40cfe689568fac9835db89385b482872cb"
+  integrity sha512-PtEs2tllcHRVZj7fwmAQBWGJ5URRQZpDG2pJsh5jusvnRje3w1+KueMZm60iCtfOkIlUn+/j2+MghxLx/8yfKQ==
   dependencies:
     datatables.net "^1.10.15"
     jquery ">=1.7"

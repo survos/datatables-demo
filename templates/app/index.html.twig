@@ -7,10 +7,15 @@
     .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
 </style>
 
-<div class="example-wrapper">
-    <h1>DataTables Demo</h1>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col col-md-3">
+            <h1>Dynamic Tables</h1>
+            <i>Data created by javascript</i>
 
-    <table id="user_table" class="table table-striped"></table>
+            <table id="dynamic_table" class="table table-striped"></table>
+        </div>
+    </div>
 
     {{ 0 ? block('example_table') }}
 
@@ -18,11 +23,12 @@
 {% endblock %}
 
 {% block stylesheets %}
-    {{ encore_entry_link_tags('app') }}
+    {{ parent() }}
 {% endblock %}
 
 {% block javascripts %}
-{{ encore_entry_script_tags('app') }}
+    {{ parent() }}
+{{ encore_entry_script_tags('dynamic-table') }}
 {% endblock %}
 
 {% block example_table %}
