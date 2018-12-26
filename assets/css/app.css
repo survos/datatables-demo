@@ -5,6 +5,6 @@ body {
 
 th, td { white-space: nowrap; }
 div.dataTables_wrapper {
-    width: 300px;
+    /* width: 300px; */
     margin: 0 auto;
 }

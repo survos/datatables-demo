@@ -1,22 +1,15 @@
 let columns = [
-    {title: '', defaultContent: ''}, // select checkbox will be created here.
+    {title: '<i class="fa fa-check">&nbsp;</i>', defaultContent: ''}, // select checkbox will be created here.
     {title: 'ID', data: "id"},
     {title: "Email", data: "email"},
     {title: "Name", data: "name"},
     {
-        title: 'Send',
-//            data: "name",
-        render: function( data, type, row, meta ) {
-            // console.log(data, type, row, meta);
-            return `<i class="fa fa-envelope">Send</i>`;
-        }
-    },
-    {
-        title: 'showBtn',
+        title: 'Actions',
         render: function( data, type, row, meta ) {
             // console.log(data, type, row, meta);
             let url = '#';
-            return `<a target="_blank" href=${url} class="btn btn-sm btn-primary" href='#'>Show</a>`;
+            return `<a target="_blank" href=${url} class="btn btn-sm btn-primary" href='#'>Show</a> ` +
+                `<i class="fa fa-envelope btn btn-sm btn-success">Send</i>`;
         }
     }
 ];
@@ -24,7 +17,7 @@ let columns = [
 
 $('#dynamic_table').DataTable( {
     rowId: 'id',
-    ordering: false, 
+    ordering: false,
     searching: false, // because it's dynamic
     // deferRender: true,
     displayLength: 50,
@@ -33,7 +26,7 @@ $('#dynamic_table').DataTable( {
     scrollCollapse: true,
     // paging:         false,
     fixedColumns:   {
-        leftColumns: 2
+        leftColumns: 3 // checkbox, id and email
     },
     columnDefs: [ {
         orderable: false,
@@ -45,8 +38,8 @@ $('#dynamic_table').DataTable( {
         selector: 'td:first-child'
     },
     buttons: [
-        'copy', 'pdf',
-        {text: 'Send (selected)'}
+        {text: '<i class="fa fa-envelope">Send</i>'},
+        {text: '<i class="fa fa-trash text-danger">Delete</i>'}
     ],
     // dom: 'Bfrtip',
     dom: 'Bfti',
@@ -62,7 +55,7 @@ $('#dynamic_table').DataTable( {
         var out = [];
 
         for ( var i=data.start, ien=data.start+data.length ; i<ien ; i++ ) {
-            out.push( {id:  i, email: "t" + i+'.gmail.com', name: 'bob jane sam' + (i * i) } );
+            out.push( {id:  i, email: "t" + i+'.gmail.com', name: 'bob jones, just some words to make sure this scrolls' + (i * i) } );
         }
         setTimeout( function () {
             callback( {

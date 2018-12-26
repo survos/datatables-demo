@@ -3,23 +3,28 @@
 {% block title %}Hello {{ controller_name }}!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-</style>
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col col-md-3">
+        <div class="col col-md-4">
             <h1>Dynamic Tables</h1>
             <i>Data created by javascript</i>
 
             <table id="dynamic_table" class="table table-striped"></table>
         </div>
+        <div class="col col-md-4">
+            <h3>page javascript</h3>
+            <pre>{{ js|escape('html') }}
+            </pre>
+        </div>
+        <div class="col col-md-4">
+            <h3>app.js</h3>
+            <pre>{{ appjs|escape('html') }}
+            </pre>
+        </div>
     </div>
-
-    {{ 0 ? block('example_table') }}
-
 </div>
+
 {% endblock %}
 
 {% block stylesheets %}
@@ -31,27 +36,3 @@
 {{ encore_entry_script_tags('dynamic-table') }}
 {% endblock %}
 
-{% block example_table %}
-<table id="example" class="table table-striped table-bordered" style="width:100%">
-    <thead>
-    <tr>
-        <th>Name</th>
-        <th>Position</th>
-        <th>Office</th>
-        <th>Age</th>
-        <th>Start date</th>
-        <th>Salary</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td>Tiger Nixon</td>
-        <td>System Architect</td>
-        <td>Edinburgh</td>
-        <td>61</td>
-        <td>2011/04/25</td>
-        <td>$320,800</td>
-    </tr>
-    </tbody>
-</table>
-{% endblock %}
