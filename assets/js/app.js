@@ -1,4 +1,4 @@
-require('../css/app.css');
+require('../css/app.scss');
 
 require('jquery');
 
@@ -14,6 +14,7 @@ require('@fortawesome/fontawesome-free/css/all.min.css');
 // require('@fortawesome/fontawesome-free/js/all.js');
 
 require('bootstrap');
+
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'datatables.net-bs4/css/dataTables.bootstrap4.min.css';

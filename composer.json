@@ -30,6 +30,7 @@
         "symfony/yaml": "4.2.*"
     },
     "require-dev": {
+        "symfony/phpunit-bridge": "4.2.*",
         "symfony/test-pack": "*",
         "symfony/web-server-bundle": "4.2.*"
     },

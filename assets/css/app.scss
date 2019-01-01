@@ -1,0 +1,96 @@
+
+// assets/css/app.scss
+
+// customize some Bootstrap variables
+$brand-primary: darken(#428bca, 20%);
+
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+// set if you're also including font-awesome
+// $fa-font-path: "~font-awesome/fonts";
+
+// the ~ allows you to reference things in node_modules
+@import '~bootstrap-sass/assets/stylesheets/bootstrap';
+// set if you're also including font-awesome
+
+#image {
+    image-orientation: from-image; /* Can be changed in the live sample */
+}
+
+// not sure why this can't be in webpack or app.js, format seems wrong
+// @import '~select2/dist/css/select2.css';
+
+.huge {
+    font-size: 40px;
+}
+
+// not sure if these should be in sites.scss or maybe app-wide is okay
+.site-selected {
+    background: none repeat scroll 0 0 #EBF4FB;
+    border-color: red;
+    //  font-size: 22px;
+    font-weight: bold;
+    //  padding: 15px 10px 10px;
+}
+
+.headline {
+    text-overflow:ellipsis;
+    font-size: 12px;
+}
+
+.xurl {
+    overflow: hidden;
+    max-width: content-box;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+.navbar-brand {
+    color: #6b1f33;
+}
+
+.headline-selected {
+    font-weight: bold;
+}
+
+tr:hover .rollOver {
+    display:block;
+}
+
+tr .rollOver{
+    display:none;
+}
+
+.navbar-static-top {
+    background-color: lightblue;
+    font-weight: bold;
+}
+
+body {
+    // background-color: lightblue;
+}
+
+
+
+tr:hover .rollOver {
+    display:block;
+}
+
+tr .rollOver{
+    display:none;
+}
+
+.xs {
+    font-size: xx-small;
+}
+
+body {
+    /* background-color: lightgray; */
+}
+
+
+th, td { white-space: nowrap; }
+div.dataTables_wrapper {
+    /* width: 300px; */
+    margin: 0 auto;
+}
